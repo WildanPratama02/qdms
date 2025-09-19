@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Our Blog')
+@section('title', 'Moisture Check')
 
 @section('content')
     <!-- Page Header Start -->

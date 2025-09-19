@@ -2,11 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FileController;
+
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 
 // Protected
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('/files', [FileController::class, 'index'])->name('admin.files');
+    Route::post('/files/upload', [FileController::class, 'store'])->name('admin.files.upload');
+    Route::delete('/files/{id}', [FileController::class, 'destroy'])->name('admin.files.delete');
+});
+
+// Add this route for file access
+Route::get('/storage/{path}', function($path) {
+    return response()->file(storage_path('app/public/' . $path));
+})->where('path', '.*');
+
 Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');

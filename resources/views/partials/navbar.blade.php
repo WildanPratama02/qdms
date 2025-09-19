@@ -35,6 +35,8 @@
                         <h5 href="#" class="nav-link dropdown-toggle {{ Request::is('rca_library') || Request::is('audit') || Request::is('404') ? 'active' : '' }}" data-bs-toggle="dropdown">Quality System</h5>
                         <div class="dropdown-menu rounded">
                             <a href="{{ url('/rca_library') }}" ><h5 class="dropdown-item {{ Request::is('rca_library') ? 'active' : '' }}">RCA Library</h5></a>
+                            <a href="{{ url('/police') }}" ><h5 class="dropdown-item {{ Request::is('police') ? 'active' : '' }}">Police</h5></a>
+                            <a href="{{ url('/work_intruction') }}" ><h5 class="dropdown-item {{ Request::is('work_intruction') ? 'active' : '' }}">Work Intruction</h5></a>
                             <a href="{{ url('/audit') }}" ><h5 class="dropdown-item {{ Request::is('audit') ? 'active' : '' }}">Audit</h5></a>
                         </div>
                     </div>

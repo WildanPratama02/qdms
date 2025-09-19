@@ -59,6 +59,14 @@ Route::get('/rca_library', function () {
     return view('pages.rca_library');
 });
 
+Route::get('/police', function () {
+    return view('pages.police');
+});
+
+Route::get('/work_intruction', function () {
+    return view('pages.work_intruction');
+});
+
 Route::get('/audit', function () {
     return view('pages.audit');
 });

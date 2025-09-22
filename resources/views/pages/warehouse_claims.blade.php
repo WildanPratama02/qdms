@@ -53,10 +53,11 @@
     <!-- Fact End -->   
 
     <!-- In-frame Looker Studio -->
-    <div class="container-fluid">
+   <div class="container-fluid">
         <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5"><h1 class="text-secondary fw-bold d-block">ON PROGRESS</h1>
-                <iframe width="600" height="338" src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="text-center p-5">
+                <iframe width="1500" height="900" src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
         </div>
     </div>
     

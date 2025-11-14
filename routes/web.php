@@ -72,6 +72,14 @@ Route::get('/rca_library', [RcaLibraryController::class, 'index'])->name('rca_li
 Route::get('/rca_library/download/{id}', [RcaLibraryController::class, 'download'])->name('rca_library.download');
 Route::get('/rca_library/view/{id}', [RcaLibraryController::class, 'view'])->name('rca_library.view');
 
+Route::get('/police', function () {
+    return view('pages.police');
+});
+
+Route::get('/work_intruction', function () {
+    return view('pages.work_intruction');
+});
+
 Route::get('/audit', function () {
     return view('pages.audit');
 });

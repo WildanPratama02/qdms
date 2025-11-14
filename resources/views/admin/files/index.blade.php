@@ -19,6 +19,8 @@
                         <th>ID</th>
                         <th>Nama File</th>
                         <th>Tipe</th>
+                        <th>Kategori</th>
+                        <th>Tanggal Dokumen</th>
                         <th>Preview</th>
                         <th>Aksi</th>
                     </tr>
@@ -29,6 +31,20 @@
                             <td>{{ $file->id }}</td>
                             <td>{{ $file->file_name }}</td>
                             <td><span class="badge bg-info">{{ strtoupper($file->file_type) }}</span></td>
+                            <td>
+                                @if($file->category)
+                                    <span class="badge bg-secondary">{{ $file->category }}</span>
+                                @else
+                                    <span class="text-muted">-</span>
+                                @endif
+                            </td>
+                            <td>
+                                @if($file->document_date)
+                                    {{ $file->document_date->format('d M Y') }}
+                                @else
+                                    <span class="text-muted">-</span>
+                                @endif
+                            </td>
                             <td>
                                 <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
                                     data-bs-target="#previewModal{{ $file->id }}">Preview</button>
@@ -81,6 +97,18 @@
                             <option value="rca">RCA</option>
                             <option value="bsom">BSOM</option>
                         </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Kategori</label>
+                        <select name="category" class="form-select">
+                            <option value="">--Pilih Kategori--</option>
+                            <option value="3rd Party">3rd Party</option>
+                            <option value="Warehouse Claims">Warehouse Claims</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tanggal Dokumen</label>
+                        <input type="date" name="document_date" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Pilih File</label>

@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FileController;
-
+use App\Http\Controllers\RcaLibraryController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -16,8 +16,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 });
 
 // Add this route for file access
-Route::get('/storage/{path}', function($path) {
-    return response()->file(storage_path('app/public/' . $path));
+Route::get('/storage/{path}', function ($path) {
+    return response()->file(storage_path('app/public/'.$path));
 })->where('path', '.*');
 
 Route::middleware('auth')->group(function () {
@@ -68,9 +68,9 @@ Route::get('/quality_system', function () {
     return view('pages.quality_system');
 });
 
-Route::get('/rca_library', function () {
-    return view('pages.rca_library');
-});
+Route::get('/rca_library', [RcaLibraryController::class, 'index'])->name('rca_library');
+Route::get('/rca_library/download/{id}', [RcaLibraryController::class, 'download'])->name('rca_library.download');
+Route::get('/rca_library/view/{id}', [RcaLibraryController::class, 'view'])->name('rca_library.view');
 
 Route::get('/audit', function () {
     return view('pages.audit');

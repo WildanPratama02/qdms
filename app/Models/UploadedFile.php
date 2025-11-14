@@ -8,14 +8,23 @@ use Illuminate\Support\Facades\Storage;
 class UploadedFile extends Model
 {
     protected $table = 'uploaded_files';
-    protected $fillable = ['file_name', 'file_type', 'file_path'];
+
+    protected $fillable = ['file_name', 'file_type', 'file_path', 'category', 'document_date'];
+
     public $timestamps = true;
+
+    protected function casts(): array
+    {
+        return [
+            'document_date' => 'date',
+        ];
+    }
 
     protected static function boot()
     {
         parent::boot();
-        
-        static::deleting(function($file) {
+
+        static::deleting(function ($file) {
             if (Storage::disk('public')->exists($file->file_path)) {
                 Storage::disk('public')->delete($file->file_path);
             }

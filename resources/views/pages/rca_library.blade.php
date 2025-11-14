@@ -1,130 +1,244 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us')
+@section('title', 'RCA Library')
 
 @section('content')
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid page-header py-5 mb-4">
         <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Contact Us</h1>
+            <h1 class="display-2 text-white mb-4 animated slideInDown">RCA Library</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">RCA Library</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- Fact Start -->
-    <div class="container-fluid bg-secondary py-5">
+    <!-- Search and Filter Section -->
+    <div class="container-fluid py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 wow fadeIn" data-wow-delay=".1s">
-                    <div class="d-flex counter">
-                        <h1 class="me-3 text-primary counter-value">99</h1>
-                        <h5 class="text-white mt-1">Success in getting happy customer</h5>
+            <div class="bg-light rounded p-4 mb-4">
+                <form method="GET" action="{{ route('rca_library') }}" id="filterForm">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="search" class="form-label">Search Documents</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control" id="search" name="search"
+                                       placeholder="Search by name..." value="{{ request('search') }}">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="">All Categories</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category }}" {{ request('category') == $category ? 'selected' : '' }}>
+                                        {{ $category }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="year" class="form-label">Year</label>
+                            <select class="form-select" id="year" name="year">
+                                <option value="">All Years</option>
+                                @foreach($years as $year)
+                                    <option value="{{ $year }}" {{ request('year') == $year ? 'selected' : '' }}>
+                                        {{ $year }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-filter me-2"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <a href="{{ route('rca_library') }}" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-times me-1"></i>Clear Filters
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Summary -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">
+                    Found {{ $files->total() }} document{{ $files->total() != 1 ? 's' : '' }}
+                    @if(request('search') || request('category') || request('year'))
+                        <span class="text-muted">(filtered)</span>
+                    @endif
+                </h5>
+            </div>
+
+            <!-- Documents Grid -->
+            @if($files->count() > 0)
+                <div class="row g-4">
+                    @foreach($files as $file)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="me-3">
+                                            @if(str_contains($file->file_name, '.pdf'))
+                                                <i class="fas fa-file-pdf text-danger fa-2x"></i>
+                                            @elseif(str_contains($file->file_name, '.doc') || str_contains($file->file_name, '.docx'))
+                                                <i class="fas fa-file-word text-primary fa-2x"></i>
+                                            @elseif(str_contains($file->file_name, '.xls') || str_contains($file->file_name, '.xlsx'))
+                                                <i class="fas fa-file-excel text-success fa-2x"></i>
+                                            @else
+                                                <i class="fas fa-file text-secondary fa-2x"></i>
+                                            @endif
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="card-title mb-1 text-truncate" title="{{ str_replace(time() . '_', '', $file->file_name) }}">
+                                                {{ str_replace(time() . '_', '', $file->file_name) }}
+                                            </h6>
+                                            @if($file->category)
+                                                <span class="badge bg-secondary">{{ $file->category }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="text-muted small mb-3">
+                                        @if($file->document_date)
+                                            <div><i class="fas fa-calendar me-1"></i>{{ $file->document_date->format('M d, Y') }}</div>
+                                        @endif
+                                        <div><i class="fas fa-clock me-1"></i>{{ $file->created_at->format('M d, Y h:i A') }}</div>
+                                    </div>
+
+                                    <div class="mt-auto">
+                                        <div class="btn-group w-100" role="group">
+                                            <button type="button" class="btn btn-outline-primary btn-sm"
+                                                    onclick="viewDocument({{ $file->id }})">
+                                                <i class="fas fa-eye me-1"></i>View
+                                            </button>
+                                            <a href="{{ route('rca_library.download', $file->id) }}"
+                                               class="btn btn-outline-success btn-sm">
+                                                <i class="fas fa-download me-1"></i>Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-center mt-5">
+                    {{ $files->links() }}
+                </div>
+            @else
+                <div class="text-center py-5">
+                    <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+                    <h5 class="text-muted">No documents found</h5>
+                    <p class="text-muted">Try adjusting your filters or search terms.</p>
+                </div>
+            @endif
+        </div>
+    </div>
+
+    <!-- Document View Modal -->
+    <div class="modal fade" id="documentModal" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="documentModalLabel">Document Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="documentPreview">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 wow fadeIn" data-wow-delay=".3s">
-                    <div class="d-flex counter">
-                        <h1 class="me-3 text-primary counter-value">25</h1>
-                        <h5 class="text-white mt-1">Thousands of successful business</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow fadeIn" data-wow-delay=".5s">
-                    <div class="d-flex counter">
-                        <h1 class="me-3 text-primary counter-value">120</h1>
-                        <h5 class="text-white mt-1">Total clients who love HighTech</h5>
-                    </div>
-                </div>
-                <div class="col-lg-3 wow fadeIn" data-wow-delay=".7s">
-                    <div class="d-flex counter">
-                        <h1 class="me-3 text-primary counter-value">5</h1>
-                        <h5 class="text-white mt-1">Stars reviews given by satisfied clients</h5>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="downloadBtn">
+                        <i class="fas fa-download me-1"></i>Download
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Fact End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5 mt-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Get In Touch</h5>
-                <h1 class="mb-3">Contact for any query</h1>
-                <p class="mb-2">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-            </div>
-            <div class="contact-detail position-relative p-5">
-                <div class="row g-5 mb-5 justify-content-center">
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                                <i class="fas fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Address</h4>
-                                <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">23 rank Str, NY</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                                <i class="fa fa-phone text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Call Us</h4>
-                                <a class="h5" href="tel:+0123456789" target="_blank">+012 3456 7890</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                                <i class="fa fa-envelope text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Email Us</h4>
-                                <a class="h5" href="mailto:info@example.com" target="_blank">info@example.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="p-5 h-100 rounded contact-map">
-                            <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4710403339755!2d-73.82241512404069!3d40.685622471397615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26749046ee14f%3A0xea672968476d962c!2s123rd%20St%2C%20Queens%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="p-5 rounded contact-form">
-                            <div class="mb-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4">
-                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email">
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Project">
-                            </div>
-                            <div class="mb-4">
-                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
-                            </div>
-                            <div class="text-start">
-                                <button class="btn bg-primary text-white py-3 px-5" type="button">Send Message</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
 @endsection
+
+@push('scripts')
+<script>
+function viewDocument(fileId) {
+    const modal = new bootstrap.Modal(document.getElementById('documentModal'));
+    const preview = document.getElementById('documentPreview');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    // Update download button
+    downloadBtn.onclick = function() {
+        window.location.href = `/rca_library/download/${fileId}`;
+    };
+
+    // Show loading spinner
+    preview.innerHTML = `
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    `;
+
+    modal.show();
+
+    // Load document
+    fetch(`/rca_library/view/${fileId}`)
+        .then(response => {
+            if (response.ok) {
+                return response.blob();
+            }
+            throw new Error('Document not found');
+        })
+        .then(blob => {
+            const url = URL.createObjectURL(blob);
+            const fileExtension = blob.type.includes('pdf') ? 'pdf' : 'doc';
+
+            if (fileExtension === 'pdf') {
+                preview.innerHTML = `
+                    <iframe src="${url}" width="100%" height="600px" style="border: none;"></iframe>
+                `;
+            } else {
+                preview.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fas fa-file-word fa-3x text-primary mb-3"></i>
+                        <h5>Document Preview</h5>
+                        <p class="text-muted">This document type cannot be previewed in browser.</p>
+                        <p class="text-muted">Please download to view the document.</p>
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            preview.innerHTML = `
+                <div class="text-center py-4">
+                    <i class="fas fa-exclamation-triangle fa-2x text-warning mb-3"></i>
+                    <h5>Unable to load document</h5>
+                    <p class="text-muted">${error.message}</p>
+                </div>
+            `;
+        });
+}
+
+// Auto-submit form on filter change
+document.getElementById('category').addEventListener('change', function() {
+    document.getElementById('filterForm').submit();
+});
+
+document.getElementById('year').addEventListener('change', function() {
+    document.getElementById('filterForm').submit();
+});
+</script>
+@endpush

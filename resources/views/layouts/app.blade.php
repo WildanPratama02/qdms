@@ -54,16 +54,19 @@
 
 <!-- Template Javascript -->
 <script src="{{ asset('js/main.js') }}"></script>
+
+@stack('scripts')
+
 <script>
     const navEl = document.querySelector('.navbar');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
             navEl.classList.add('navbar-scrolled');
-        } 
+        }
         else {
             navEl.classList.remove('navbar-scrolled');
-        } 
+        }
      });
 </script>
 </body>

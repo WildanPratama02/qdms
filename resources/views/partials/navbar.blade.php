@@ -35,14 +35,42 @@
                         <h5 href="#" class="nav-link dropdown-toggle {{ Request::is('rca_library') || Request::is('audit') || Request::is('404') ? 'active' : '' }}" data-bs-toggle="dropdown">Quality System</h5>
                         <div class="dropdown-menu rounded">
                             <a href="{{ url('/rca_library') }}" ><h5 class="dropdown-item {{ Request::is('rca_library') ? 'active' : '' }}">RCA Library</h5></a>
-                            <a href="{{ url('/police') }}" ><h5 class="dropdown-item {{ Request::is('police') ? 'active' : '' }}">Police</h5></a>
-                            <a href="{{ url('/work_intruction') }}" ><h5 class="dropdown-item {{ Request::is('work_intruction') ? 'active' : '' }}">Work Intruction</h5></a>
-                            <a href="{{ url('/audit') }}" ><h5 class="dropdown-item {{ Request::is('audit') ? 'active' : '' }}">Audit</h5></a>
+                            <a href="{{ url('/policy_library') }}" ><h5 class="dropdown-item {{ Request::is('police') ? 'active' : '' }}">Policy</h5></a>
+                            <a href="{{ url('/work_instruction_library') }}" ><h5 class="dropdown-item {{ Request::is('work_intruction') ? 'active' : '' }}">Work Instruction</h5></a>
+                            <a href="{{ url('/audit_library') }}" ><h5 class="dropdown-item {{ Request::is('audit') ? 'active' : '' }}">Audit</h5></a>
                         </div>
                     </div>
                         <a href="{{ url('/training') }}"><h5 class="nav-item nav-link {{ Request::is('training') ? 'active' : '' }}">Digital Training</h5></a>
                         <a href="{{ url('/quality_ambassador') }}"><h5 class="nav-item nav-link {{ Request::is('quality_ambassador') ? 'active' : '' }}">Quality Ambassador</h5></a>
-                        <a href="{{ url('/login') }}"><h5 class="btn btn-success {{ Request::is('login') ? 'active' : '' }}">Login</h5></a>
+
+                        @if(auth()->check())
+                            <!-- Admin Menu -->
+                            <div class="nav-item dropdown">
+                                <h5 href="#" class="nav-link dropdown-toggle text-warning" data-bs-toggle="dropdown">
+                                    <i class="fas fa-cog me-1"></i>Admin
+                                </h5>
+                                <div class="dropdown-menu rounded">
+                                    <a href="{{ route('admin.dashboard') }}" class="dropdown-item">
+                                        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                                    </a>
+                                    <a href="{{ route('admin.files.index') }}" class="dropdown-item">
+                                        <i class="fas fa-file-alt me-2"></i>File Management
+                                    </a>
+                                    <a href="{{ route('admin.quality_ambassadors.index') }}" class="dropdown-item">
+                                        <i class="fas fa-users me-2"></i>Quality Ambassadors
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item text-danger">
+                                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        @else
+                            <a href="{{ url('/login') }}"><h5 class="btn btn-success {{ Request::is('login') ? 'active' : '' }}">Login</h5></a>
+                        @endif
                 </div>
             </div>
         </nav>

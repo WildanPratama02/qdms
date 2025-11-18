@@ -96,15 +96,51 @@
                             <option value="">--Pilih--</option>
                             <option value="rca">RCA</option>
                             <option value="bsom">BSOM</option>
+                            <option value="policy">Policy</option>
+                            <option value="work_instruction">Work Instruction</option>
+                            <option value="audit">Audit</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Kategori</label>
-                        <select name="category" class="form-select">
+                        <select name="category" class="form-select" id="categorySelect">
                             <option value="">--Pilih Kategori--</option>
-                            <option value="3rd Party">3rd Party</option>
-                            <option value="Warehouse Claims">Warehouse Claims</option>
                         </select>
+                    </div>
+
+                    <!-- RCA Categories -->
+                    <div id="rcaCategories" style="display: none;">
+                        <option value="3rd Party">3rd Party</option>
+                        <option value="Warehouse Claims">Warehouse Claims</option>
+                    </div>
+
+                    <!-- Policy Categories -->
+                    <div id="policyCategories" style="display: none;">
+                        <option value="AQL Policy">AQL Policy</option>
+                        <option value="BPM Mold Policy">BPM Mold Policy</option>
+                        <option value="Cut to Box Policy">Cut to Box Policy</option>
+                        <option value="Defective Return Policy">Defective Return Policy</option>
+                        <option value="Development Policy">Development Policy</option>
+                        <option value="LAB Policy">LAB Policy</option>
+                        <option value="Warehouse Policy">Warehouse Policy</option>
+                    </div>
+
+                    <!-- Work Instruction Categories -->
+                    <div id="workInstructionCategories" style="display: none;">
+                        <option value="AQL Inspection">AQL Inspection</option>
+                        <option value="Cut to Box Inspection">Cut to Box Inspection</option>
+                        <option value="Bottom Inspection">Bottom Inspection</option>
+                        <option value="Incoming Chemical Inspection">Incoming Chemical Inspection</option>
+                        <option value="Printing and Embosing Inspection">Printing and Embosing Inspection</option>
+                        <option value="Stockfit Inspection">Stockfit Inspection</option>
+                        <option value="Incoming Material Inspection">Incoming Material Inspection</option>
+                    </div>
+
+                    <!-- Audit Categories -->
+                    <div id="auditCategories" style="display: none;">
+                        <option value="Culture Audit">Culture Audit</option>
+                        <option value="QAM Audit">QAM Audit</option>
+                        <option value="Subcont Audit">Subcont Audit</option>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Tanggal Dokumen</label>
@@ -121,4 +157,44 @@
             </form>
         </div>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fileTypeSelect = document.querySelector('select[name="file_type"]');
+        const categorySelect = document.getElementById('categorySelect');
+        const rcaCategories = document.getElementById('rcaCategories').querySelectorAll('option');
+        const policyCategories = document.getElementById('policyCategories').querySelectorAll('option');
+        const workInstructionCategories = document.getElementById('workInstructionCategories').querySelectorAll('option');
+        const auditCategories = document.getElementById('auditCategories').querySelectorAll('option');
+
+        function updateCategories() {
+            // Clear existing options (except the first one)
+            while (categorySelect.children.length > 1) {
+                categorySelect.removeChild(categorySelect.lastChild);
+            }
+
+            const selectedType = fileTypeSelect.value;
+
+            if (selectedType === 'rca') {
+                rcaCategories.forEach(option => {
+                    categorySelect.appendChild(option.cloneNode(true));
+                });
+            } else if (selectedType === 'policy') {
+                policyCategories.forEach(option => {
+                    categorySelect.appendChild(option.cloneNode(true));
+                });
+            } else if (selectedType === 'work_instruction') {
+                workInstructionCategories.forEach(option => {
+                    categorySelect.appendChild(option.cloneNode(true));
+                });
+            } else if (selectedType === 'audit') {
+                auditCategories.forEach(option => {
+                    categorySelect.appendChild(option.cloneNode(true));
+                });
+            }
+        }
+
+        fileTypeSelect.addEventListener('change', updateCategories);
+    });
+    </script>
 @endsection

@@ -22,7 +22,7 @@ class FileController extends Controller
             // Validate request
             $request->validate([
                 'file' => 'required|mimes:pdf,doc,docx,xlsx|max:20480',
-                'file_type' => 'required|in:rca,bsom',
+                'file_type' => 'required|in:rca,bsom,policy,work_instruction,audit',
                 'category' => 'nullable|string|max:255',
                 'document_date' => 'nullable|date',
             ]);

@@ -50,7 +50,7 @@
                                     data-bs-target="#previewModal{{ $file->id }}">Preview</button>
                             </td>
                             <td>
-                                <form action="{{ route('admin.files.delete', $file->id) }}" method="POST"
+                                <form action="{{ route('admin.files.destroy', $file->id) }}" method="POST"
                                     onsubmit="return confirm('Hapus file ini?')">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-danger btn-sm">Hapus</button>
@@ -67,7 +67,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <iframe src="{{ asset('storage/' . $file->file_path) }}" class="w-100"
+                                        <iframe src="{{ asset("storage/{$file->file_path}") }}" class="w-100"
                                             height="500px"></iframe>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
     <!-- Modal Upload -->
     <div class="modal fade" id="uploadModal" tabindex="-1">
         <div class="modal-dialog">
-            <form action="{{ route('admin.files.upload') }}" method="POST" enctype="multipart/form-data"
+            <form action="{{ route('admin.files.store') }}" method="POST" enctype="multipart/form-data"
                 class="modal-content">
                 @csrf
                 <div class="modal-header">

@@ -44,7 +44,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h4 class="p-3">Admin Panel</h4>
-        <a href="{{ route('admin.files') }}">📁 Files</a>
+        <a href="{{ route('admin.files.index') }}">📁 Files</a>
         <a href="{{ route('home') }}">🏠 Home Page</a>
         <div class="mt-auto p-3">
             <form action="{{ route('logout') }}" method="POST">

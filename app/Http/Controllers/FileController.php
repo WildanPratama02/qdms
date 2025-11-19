@@ -11,7 +11,7 @@ class FileController extends Controller
 {
     public function index()
     {
-        $files = UploadedFile::latest()->get();
+        $files = UploadedFile::latest()->paginate(10);
 
         return view('admin.files.index', compact('files'));
     }

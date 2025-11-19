@@ -1,83 +1,140 @@
-<!-- resources/views/admin/files/index.blade.php -->
-@extends('admin.layout')
+@extends('layouts.admin')
+
+@section('title', 'Files Management')
 
 @section('content')
-    <div class="card shadow-sm">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Manajemen File</h5>
-            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#uploadModal">+ Upload
-                File</button>
-        </div>
-        <div class="card-body">
-            @if(session('success'))
-                <div class="alert alert-success">{{ session('success') }}</div>
-            @endif
-
-            <table class="table table-bordered table-striped">
-                <thead class="table-primary">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nama File</th>
-                        <th>Tipe</th>
-                        <th>Kategori</th>
-                        <th>Tanggal Dokumen</th>
-                        <th>Preview</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($files as $file)
-                        <tr>
-                            <td>{{ $file->id }}</td>
-                            <td>{{ $file->file_name }}</td>
-                            <td><span class="badge bg-info">{{ strtoupper($file->file_type) }}</span></td>
-                            <td>
-                                @if($file->category)
-                                    <span class="badge bg-secondary">{{ $file->category }}</span>
-                                @else
-                                    <span class="text-muted">-</span>
-                                @endif
-                            </td>
-                            <td>
-                                @if($file->document_date)
-                                    {{ $file->document_date->format('d M Y') }}
-                                @else
-                                    <span class="text-muted">-</span>
-                                @endif
-                            </td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
-                                    data-bs-target="#previewModal{{ $file->id }}">Preview</button>
-                            </td>
-                            <td>
-                                <form action="{{ route('admin.files.destroy', $file->id) }}" method="POST"
-                                    onsubmit="return confirm('Hapus file ini?')">
-                                    @csrf @method('DELETE')
-                                    <button class="btn btn-danger btn-sm">Hapus</button>
-                                </form>
-                            </td>
-                        </tr>
-
-                        <!-- Modal Preview -->
-                        <div class="modal fade" id="previewModal{{ $file->id }}" tabindex="-1">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Preview File</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <iframe src="{{ asset("storage/{$file->file_path}") }}" class="w-100"
-                                            height="500px"></iframe>
-                                    </div>
-                                </div>
-                            </div>
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <i class="fas fa-file-alt me-2"></i>Files Management
+                    </h5>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                        <i class="fas fa-plus me-2"></i>Upload File
+                    </button>
+                </div>
+                <div class="card-body">
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
-                    @endforeach
-                </tbody>
-            </table>
+                    @endif
+
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>File Name</th>
+                                    <th>Type</th>
+                                    <th>Category</th>
+                                    <th>Document Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($files as $file)
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-3">
+                                                    @if($file->file_type == 'rca')
+                                                        <i class="fas fa-file-pdf fa-2x text-danger"></i>
+                                                    @elseif($file->file_type == 'bsom')
+                                                        <i class="fas fa-file-excel fa-2x text-success"></i>
+                                                    @elseif($file->file_type == 'policy')
+                                                        <i class="fas fa-file-contract fa-2x text-primary"></i>
+                                                    @elseif($file->file_type == 'work_instruction')
+                                                        <i class="fas fa-file-alt fa-2x text-info"></i>
+                                                    @elseif($file->file_type == 'audit')
+                                                        <i class="fas fa-file-audio fa-2x text-warning"></i>
+                                                    @else
+                                                        <i class="fas fa-file fa-2x text-secondary"></i>
+                                                    @endif
+                                                </div>
+                                                <div>
+                                                    <strong>{{ $file->file_name }}</strong>
+                                                    @if($file->category)
+                                                        <br><small class="text-muted">{{ $file->category }}</small>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge bg-info text-uppercase">{{ $file->file_type }}</span></td>
+                                        <td>
+                                            @if($file->category)
+                                                <span class="badge bg-secondary">{{ $file->category }}</span>
+                                            @else
+                                                <span class="text-muted">-</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if($file->document_date)
+                                                {{ $file->document_date->format('M d, Y') }}
+                                            @else
+                                                <span class="text-muted">-</span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success">
+                                                {{ $file->file_type == 'rca' ? 'RCA' : strtoupper($file->file_type) }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#previewModal{{ $file->id }}" title="Preview">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <a href="{{ asset("storage/{$file->file_path}") }}"
+                                                   class="btn btn-outline-success"
+                                                   title="Download"
+                                                   target="_blank">
+                                                    <i class="fas fa-download"></i>
+                                                </a>
+                                                <form action="{{ route('admin.files.destroy', $file->id) }}" method="POST"
+                                                      class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"
+                                                            class="btn btn-outline-danger"
+                                                            title="Delete"
+                                                            onclick="return confirm('Are you sure you want to delete this file?')">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="6" class="text-center py-4">
+                                            <i class="fas fa-file fa-3x text-muted mb-3"></i>
+                                            <h5 class="text-muted">No Files found</h5>
+                                            <p class="text-muted">Get started by adding your first file.</p>
+                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                                                <i class="fas fa-plus me-2"></i>Add First File
+                                            </button>
+                                        </td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+
+                    @if($files->hasPages())
+                        <div class="d-flex justify-content-center mt-4">
+                            {{ $files->links() }}
+                        </div>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
     <!-- Modal Upload -->
     <div class="modal fade" id="uploadModal" tabindex="-1">

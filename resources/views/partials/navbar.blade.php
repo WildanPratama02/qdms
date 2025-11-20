@@ -40,7 +40,6 @@
                             <a href="{{ url('/audit_library') }}" ><h5 class="dropdown-item {{ Request::is('audit') ? 'active' : '' }}">Audit</h5></a>
                         </div>
                     </div>
-                        <a href="{{ url('/training') }}"><h5 class="nav-item nav-link {{ Request::is('training') ? 'active' : '' }}">Digital Training</h5></a>
                         <a href="{{ url('/quality_ambassador') }}"><h5 class="nav-item nav-link {{ Request::is('quality_ambassador') ? 'active' : '' }}">Quality Ambassador</h5></a>
 
                         @if(auth()->check())

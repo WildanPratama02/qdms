@@ -98,10 +98,6 @@ Route::get('/audit_library', [AuditLibraryController::class, 'index'])->name('au
 Route::get('/audit_library/download/{id}', [AuditLibraryController::class, 'download'])->name('audit_library.download');
 Route::get('/audit_library/view/{id}', [AuditLibraryController::class, 'view'])->name('audit_library.view');
 
-Route::get('/training', function () {
-    return view('pages.training');
-});
-
 Route::get('/quality_ambassador', [QualityAmbassadorController::class, 'index'])->name('quality_ambassador');
 Route::get('/quality_ambassador/{id}', [QualityAmbassadorController::class, 'show'])->name('quality_ambassador.show');
 

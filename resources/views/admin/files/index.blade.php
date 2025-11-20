@@ -2,6 +2,133 @@
 
 @section('title', 'Files Management')
 
+@push('styles')
+<style>
+    /* Fix for action buttons */
+    .btn-group-sm > .btn, .btn-sm {
+        padding: 0.375rem 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.4;
+        border-radius: 0.25rem;
+    }
+
+    /* Fix for table responsive overflow */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Fix for pagination */
+    .pagination {
+        margin-bottom: 0;
+    }
+
+    .page-link {
+        color: #0d6efd;
+        border-color: #dee2e6;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .page-link:hover {
+        color: #0a58ca;
+        background-color: #e9ecef;
+        border-color: #dee2e6;
+    }
+
+    .page-item.active .page-link {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    /* Fix for button icons alignment */
+    .btn i {
+        display: inline-block;
+        width: 1.25em;
+        text-align: center;
+    }
+
+    /* Fix for file type icons */
+    .fa-2x {
+        font-size: 1.5em;
+    }
+
+    /* Fix for table styling */
+    .table {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .table th {
+        border-top: none;
+        font-weight: 600;
+        color: #495057;
+        background-color: #f8f9fa;
+    }
+
+    .table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Fix for badge styling */
+    .badge {
+        font-size: 0.75em;
+    }
+
+    /* Fix for empty state */
+    .text-center.py-4 {
+        padding: 3rem 1rem !important;
+    }
+
+    /* Fix for pagination footer/results display */
+    .pagination-footer {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        padding: 0;
+        border-bottom-left-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+    }
+
+    /* Enhanced Bootstrap 5 pagination fixes */
+    .d-flex.justify-items-center.justify-content-between {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .small.text-muted {
+        font-size: 0.875rem !important;
+        color: #6c757d !important;
+        margin: 0 !important;
+        font-weight: 500 !important;
+    }
+
+    .fw-semibold {
+        font-weight: 600 !important;
+        color: #495057 !important;
+    }
+
+    @media (max-width: 576px) {
+        .d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
+            display: none !important;
+        }
+
+        .d-flex.justify-content-between.flex-fill.d-sm-none {
+            display: flex !important;
+        }
+    }
+</style>
+@endpush
+
 @section('content')
 <div class="container-fluid py-4">
     <div class="row">
@@ -50,7 +177,7 @@
                                                     @elseif($file->file_type == 'work_instruction')
                                                         <i class="fas fa-file-alt fa-2x text-info"></i>
                                                     @elseif($file->file_type == 'audit')
-                                                        <i class="fas fa-file-audio fa-2x text-warning"></i>
+                                                        <i class="fas fa-file-invoice fa-2x text-warning"></i>
                                                     @else
                                                         <i class="fas fa-file fa-2x text-secondary"></i>
                                                     @endif
@@ -85,14 +212,16 @@
                                         </td>
                                         <td>
                                             <div class="btn-group btn-group-sm" role="group">
-                                                <button class="btn btn-outline-primary" data-bs-toggle="modal"
-                                                    data-bs-target="#previewModal{{ $file->id }}" title="Preview">
+                                                <a href="{{ asset("storage/{$file->file_path}") }}"
+                                                   class="btn btn-outline-primary"
+                                                   title="Preview"
+                                                   target="_blank">
                                                     <i class="fas fa-eye"></i>
-                                                </button>
+                                                </a>
                                                 <a href="{{ asset("storage/{$file->file_path}") }}"
                                                    class="btn btn-outline-success"
                                                    title="Download"
-                                                   target="_blank">
+                                                   download="{{ $file->file_name }}">
                                                     <i class="fas fa-download"></i>
                                                 </a>
                                                 <form action="{{ route('admin.files.destroy', $file->id) }}" method="POST"
@@ -103,7 +232,7 @@
                                                             class="btn btn-outline-danger"
                                                             title="Delete"
                                                             onclick="return confirm('Are you sure you want to delete this file?')">
-                                                        <i class="fas fa-trash"></i>
+                                                        <i class="fas fa-trash-alt"></i>
                                                     </button>
                                                 </form>
                                             </div>
@@ -126,8 +255,8 @@
                     </div>
 
                     @if($files->hasPages())
-                        <div class="d-flex justify-content-center mt-4">
-                            {{ $files->links() }}
+                        <div class="pagination-footer mt-0">
+                            {{ $files->links('pagination::bootstrap-5') }}
                         </div>
                     @endif
                 </div>

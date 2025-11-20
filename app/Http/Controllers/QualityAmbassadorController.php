@@ -10,9 +10,7 @@ class QualityAmbassadorController extends Controller
 {
     public function index()
     {
-        $ambassadors = QualityAmbassador::where('is_active', true)
-            ->orderBy('adi_daser_score', 'desc')
-            ->get();
+        $ambassadors = QualityAmbassador::orderBy('id', 'asc')->get();
 
         return view('pages.quality_ambassador', compact('ambassadors'));
     }
@@ -42,20 +40,14 @@ class QualityAmbassadorController extends Controller
             'name' => 'required|string|max:255',
             'motto' => 'nullable|string|max:500',
             'adi_daser_score' => 'nullable|numeric|min:0|max:100',
-            'biography' => 'nullable|string',
-            'department' => 'nullable|string|max:255',
-            'position' => 'nullable|string|max:255',
             'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $data = $request->except('profile_image');
 
-        // Handle checkbox properly
-        $data['is_active'] = $request->has('is_active') ? true : false;
-
         if ($request->hasFile('profile_image')) {
             $image = $request->file('profile_image');
-            $fileName = time() . '_' . $image->getClientOriginalName();
+            $fileName = time().'_'.$image->getClientOriginalName();
             $image->storeAs('ambassadors', $fileName, 'public');
             $data['profile_image'] = "ambassadors/{$fileName}";
         }
@@ -81,16 +73,10 @@ class QualityAmbassadorController extends Controller
             'name' => 'required|string|max:255',
             'motto' => 'nullable|string|max:500',
             'adi_daser_score' => 'nullable|numeric|min:0|max:100',
-            'biography' => 'nullable|string',
-            'department' => 'nullable|string|max:255',
-            'position' => 'nullable|string|max:255',
             'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $data = $request->except('profile_image');
-
-        // Handle checkbox properly
-        $data['is_active'] = $request->has('is_active') ? true : false;
 
         if ($request->hasFile('profile_image')) {
             // Delete old image
@@ -99,7 +85,7 @@ class QualityAmbassadorController extends Controller
             }
 
             $image = $request->file('profile_image');
-            $fileName = time() . '_' . $image->getClientOriginalName();
+            $fileName = time().'_'.$image->getClientOriginalName();
             $image->storeAs('ambassadors', $fileName, 'public');
             $data['profile_image'] = "ambassadors/{$fileName}";
         }

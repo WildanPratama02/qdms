@@ -28,6 +28,32 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    @stack('styles')
+
+<style>
+    /* Admin Navbar Active States */
+    .navbar-nav .nav-link.active {
+        color: #0d6efd !important;
+        background-color: rgba(13, 110, 253, 0.1) !important;
+        border-radius: 0.375rem;
+    }
+
+    .navbar-nav .dropdown-item.active {
+        color: #0d6efd !important;
+        background-color: rgba(13, 110, 253, 0.1) !important;
+        font-weight: 600;
+    }
+
+    .navbar-nav .dropdown-item:hover {
+        color: #0d6efd !important;
+        background-color: rgba(13, 110, 253, 0.08) !important;
+    }
+
+    .navbar-nav .dropdown-item.active:hover {
+        background-color: rgba(13, 110, 253, 0.15) !important;
+    }
+</style>
 </head>
 
 <body>
@@ -47,12 +73,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
+                <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Admin</a>
+                    <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('admin.*') ? 'active' : '' }}" data-bs-toggle="dropdown">Admin</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="{{ route('admin.files.index') }}" class="dropdown-item">File Management</a>
-                        <a href="{{ route('admin.quality_ambassadors.index') }}" class="dropdown-item active">Quality Ambassadors</a>
+                        <a href="{{ route('admin.files.index') }}" class="dropdown-item {{ request()->routeIs('admin.files.index') ? 'active' : '' }}">File Management</a>
+                        <a href="{{ route('admin.quality_ambassadors.index') }}" class="dropdown-item {{ request()->routeIs('admin.quality_ambassadors.index') ? 'active' : '' }}">Quality Ambassadors</a>
                     </div>
                 </div>
                 <a href="{{ route('home') }}" class="nav-item nav-link">Back to Site</a>

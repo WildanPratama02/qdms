@@ -52,11 +52,25 @@
     </div>
     <!-- Fact End -->
 
-    <!-- In-frame Looker Studio -->
-        <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5"><h1 class="text-secondary fw-bold d-block">ON PROGRESS CONNECT TO ERP</h1>
-                <!-- <iframe width="1500" height="900" src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe> -->
+      <!-- Dashboard Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="text-center p-5">
+                        <h1 class="text-secondary fw-bold d-block mb-4">ON PROGRESS CONNECT TO ERP</h1>
+                        <!-- Placeholder for future iframe
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                    title="RFT Dashboard">
+                            </iframe>
+                        </div>
+                        -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

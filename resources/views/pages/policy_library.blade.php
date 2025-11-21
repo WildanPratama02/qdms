@@ -213,7 +213,11 @@ function viewDocument(fileId) {
 
             if (fileExtension === 'pdf') {
                 preview.innerHTML = `
-                    <iframe src="${url}" width="100%" height="700px" style="border: none;"></iframe>
+                    <div class="ratio ratio-16x9" style="min-height: 700px;">
+                        <iframe src="${url}"
+                            class="border-0 shadow-sm rounded"
+                            title="PDF Document Preview"></iframe>
+                    </div>
                 `;
             } else {
                 preview.innerHTML = `

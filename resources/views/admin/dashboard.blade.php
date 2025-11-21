@@ -37,7 +37,7 @@
                             <div class="card border-0 shadow-sm bg-info text-white">
                                 <div class="card-body text-center">
                                     <i class="fas fa-check-circle fa-2x mb-3"></i>
-                                    <h4 class="mb-1">{{ \App\Models\QualityAmbassador::where('is_active', true)->count() }}</h4>
+                                    <h4 class="mb-1">{{ \App\Models\QualityAmbassador::count() }}</h4>
                                     <p class="mb-0">Active Ambassadors</p>
                                 </div>
                             </div>

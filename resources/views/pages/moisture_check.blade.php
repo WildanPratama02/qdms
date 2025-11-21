@@ -19,10 +19,15 @@
     <div class="container-fluid py-5 mt-5">
         <div class="container py-5">
             <div class="row g-5">
-                <iframe width="1000" height="950"
-                    src="https://lookerstudio.google.com/embed/reporting/eb46f77a-0351-4e0c-9fa3-09872778ed59/page/Tr41D"
-                    frameborder="0" style="border:0" allowfullscreen
-                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://lookerstudio.google.com/embed/reporting/eb46f77a-0351-4e0c-9fa3-09872778ed59/page/Tr41D"
+                            title="Moisture Dashboard"
+                            class="border-0 shadow-sm rounded"
+                            allowfullscreen
+                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                    </div>
+                </div>
 
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">

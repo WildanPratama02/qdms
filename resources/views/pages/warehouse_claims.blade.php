@@ -53,10 +53,18 @@
     <!-- Fact End -->   
 
     <!-- In-frame Looker Studio -->
-   <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5">
-                <iframe width="1500" height="900" src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd"
+                            title="Warehouse Claims Dashboard"
+                            class="border-0 shadow-sm rounded"
+                            allowfullscreen
+                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

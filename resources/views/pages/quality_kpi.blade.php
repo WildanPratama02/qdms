@@ -54,31 +54,36 @@
     </div>
     <!-- Fact End -->
 
-    <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5">
-                <iframe width="1500" height="900"
-                    src="https://lookerstudio.google.com/embed/reporting/79a8c7b1-4c89-4eef-a465-bb10c600ab15/page/p_2ul6f30yfd"
-                    frameborder="0" style="border:0" allowfullscreen
-                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+    <!-- Dashboard Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://lookerstudio.google.com/embed/reporting/79a8c7b1-4c89-4eef-a465-bb10c600ab15/page/p_2ul6f30yfd"
+                                frameborder="0"
+                                allowfullscreen
+                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                title="Quality KPI Dashboard"
+                                class="border-0 shadow-sm rounded">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Project Start -->
-    <div class="container-fluid py-5 my-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
-                    <div class="h-100 position-relative">
-                        <img src="asset/qkpi.png" class="img-fluid w-100 rounded" alt="" style="margin-bottom: 25%;">
-                        <!-- <div class="position-absolute w-75" style="top: 25%; left: 25%;">
-                                <img src="img/about-2.jpg" class="img-fluid w-100 rounded" alt="">
-                            </div> -->
+    <!-- About Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-12 col-lg-5 wow fadeIn" data-wow-delay=".3s">
+                    <div class="position-relative">
+                        <img src="asset/qkpi.png" class="img-fluid w-100 rounded shadow-sm" alt="Quality KPI">
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+                <div class="col-12 col-lg-7 wow fadeIn" data-wow-delay=".5s">
                     <h1 class="mb-4">QUALITY-KPI</h1>
                     <p class="mb-4" style="text-align: justify">A Quality Key Performance Indicator (KPI) is a measurable
                         value that demonstrates how effectively a company is achieving its quality objectives. These KPIs

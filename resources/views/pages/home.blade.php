@@ -142,63 +142,72 @@
         </div>
     </div>
 <br><br>
-<div class="row g-2 container-fluid">
-    <div class="col" style="margin-left : 20px">
-        <img src="/asset/q-kpi score.png" alt="" width="100%" height="100%">
-    </div>
-    <div class="col-md-4 col-lg-4 ">
-        <div class="container row g-2">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h2 class="text-primary">Our Project</h2>
-            </div>
-            <div class="col-md-4 col-lg-4 wow fadeIn" style="margin-left: 60px;" data-wow-delay=".3s">
-            <div class="project-item">
-                <div class="project-img">
-                     <img src="asset/audit.png" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                        <a href="#" class="text-center">
-                            <h3 class="text-secondary">Audit</h3>
-                            <!-- <p class="m-0 text-white">Web Analysis</p> -->
-                        </a>
-                    </div>
+<div class="container-fluid py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+            <h2 class="text-primary">Our Focus</h2>
+        </div>
+
+        <!-- Focus Grid -->
+        <div class="row g-4">
+            <!-- Left Side - KPI Score Image -->
+            <div class="col-12 col-lg-4">
+                <div class="h-100">
+                    <img src="/asset/q-kpi score.png" alt="Quality KPI Score" class="img-fluid rounded h-100" style="object-fit: cover;">
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-lg-4 wow fadeIn" style="margin-left: 60px;" data-wow-delay=".3s">
-            <div class="project-item">
-                <div class="project-img">
-                    <img src="asset/rft.png" class="img-fluid w-80 rounded" alt="">
-                    <div class="project-content">
-                        <a href="#" class="text-center">
-                             <h3 class="text-secondary">RFT</h3>
-                            <!-- <p class="m-0 text-white">Web Analysis</p> -->
-                        </a>
+
+            <!-- Right Side - Project Items -->
+            <div class="col-12 col-lg-8">
+                <div class="row g-4 h-100">
+                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".3s">
+                        <div class="project-item h-100">
+                            <div class="project-img h-100">
+                                <img src="asset/audit.png" class="img-fluid w-100 h-100 rounded" alt="Audit" style="object-fit: cover;">
+                                <div class="project-content">
+                                    <a href="#" class="text-center">
+                                        <h3 class="text-secondary">Audit</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-         <div class="col-md-4 col-lg-4 wow fadeIn" style="margin-left: 60px; margin-top: 50px;" data-wow-delay=".3s">
-            <div class="project-item">
-                <div class="project-img">
-                    <img src="asset/kpi.png" class="img-fluid w-100 rounded" alt="">
-                    <div class="project-content">
-                        <a href="#" class="text-center">
-                             <h3 class="text-secondary">Q-KPI</h3>
-                            <!-- <p class="m-0 text-white">Web Analysis</p> -->
-                        </a>
+                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".5s">
+                        <div class="project-item h-100">
+                            <div class="project-img h-100">
+                                <img src="asset/rft.png" class="img-fluid w-100 h-100 rounded" alt="RFT" style="object-fit: cover;">
+                                <div class="project-content">
+                                    <a href="#" class="text-center">
+                                        <h3 class="text-secondary">RFT</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-lg-4 wow fadeIn" style="margin-left: 60px; margin-top: 50px;" data-wow-delay=".3s">
-            <div class="project-item">
-                <div class="project-img">
-                    <img src="asset/ambassador.jpg" class="img-fluid w-100 rounded" alt="">
-                    <div class="project-content">
-                        <a href="#" class="text-center">
-                            <h4 class="text-secondary">Ambassador</h4>
-                            <!-- <p class="m-0 text-white">Web Analysis</p> -->
-                        </a>
+                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".7s">
+                        <div class="project-item h-100">
+                            <div class="project-img h-100">
+                                <img src="asset/kpi.png" class="img-fluid w-100 h-100 rounded" alt="Q-KPI" style="object-fit: cover;">
+                                <div class="project-content">
+                                    <a href="#" class="text-center">
+                                        <h3 class="text-secondary">Q-KPI</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".9s">
+                        <div class="project-item h-100">
+                            <div class="project-img h-100">
+                                <img src="asset/ambassador.jpg" class="img-fluid w-100 h-100 rounded" alt="Ambassador" style="object-fit: cover;">
+                                <div class="project-content">
+                                    <a href="#" class="text-center">
+                                        <h4 class="text-secondary">Ambassador</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,10 +222,19 @@
 <br><br>
     <hr>
 
-    <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5">
-                <iframe src="https://drive.google.com/file/d/1i8xSNojIfhgDLi9Oh2sPFC00ZHhbn0Ib/preview" width="1000" height="600" allow="autoplay"></iframe>
+    <!-- Dashboard Embed Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://drive.google.com/file/d/1i8xSNojIfhgDLi9Oh2sPFC00ZHhbn0Ib/preview"
+                                allow="autoplay"
+                                title="Dashboard Preview"
+                                class="border-0 shadow-sm rounded">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

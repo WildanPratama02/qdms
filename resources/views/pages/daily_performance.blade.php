@@ -16,19 +16,25 @@
     <div class="container-fluid bg-secondary py-5">
     </div>
     <!-- Fact End -->
-    <!-- Contact Start -->
-    <div class="container-fluid py-5 mt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <iframe width="1000" height="900"
-                    src="https://lookerstudio.google.com/embed/reporting/d9942398-d643-44a5-8e86-edb77dec3268/page/p_rikxq8h2od"
-                    frameborder="0" style="border:0" allowfullscreen
-                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-
+    <!-- Dashboard Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://lookerstudio.google.com/embed/reporting/d9942398-d643-44a5-8e86-edb77dec3268/page/p_rikxq8h2od"
+                                frameborder="0"
+                                allowfullscreen
+                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                title="Daily Performance Dashboard"
+                                class="border-0 shadow-sm rounded">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Dashboard End -->
 
     <div class="container-fluid bg-secondary py-5">
         <div class="container text-center">

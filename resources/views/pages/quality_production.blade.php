@@ -54,9 +54,17 @@
 
     <!-- In-frame Looker Studio -->
     <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5">
-                <iframe width="1500" height="900" src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
+                            title="Quality Production Dashboard"
+                            class="border-0 shadow-sm rounded"
+                            allowfullscreen
+                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

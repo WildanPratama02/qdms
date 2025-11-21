@@ -52,11 +52,18 @@
     </div>
     <!-- Fact End -->   
 
-    <!-- In-frame Looker Studio -->
-        <div class="container-fluid">
-        <div class="embed-responsive embed-responsive-16by9">
-            <div class="text-center p-5">
-                <iframe width="1500" height="900" src="https://enggtemp.weebly.com/"></iframe>
+    <!-- Dashboard Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://enggtemp.weebly.com/"
+                                title="Humidity Control Dashboard"
+                                class="border-0 shadow-sm rounded">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

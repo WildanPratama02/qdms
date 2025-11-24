@@ -52,17 +52,32 @@
     </div>
     <!-- Fact End -->
 
-    <!-- In-frame Looker Studio -->
-    <div class="container-fluid">
+    <!-- Dashboard Section -->
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
-                            title="Quality Production Dashboard"
-                            class="border-0 shadow-sm rounded"
-                            allowfullscreen
-                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Quality Production Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Real-time production quality metrics and performance indicators</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
+                                title="Quality Production Dashboard"
+                                class="dashboard-iframe border-0 shadow-lg rounded-3"
+                                allowfullscreen
+                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-industry me-2"></i>
+                            Live production monitoring and quality control metrics
+                        </p>
                     </div>
                 </div>
             </div>

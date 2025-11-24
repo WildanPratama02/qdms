@@ -52,17 +52,32 @@
     </div>
     <!-- Fact End -->   
 
-    <!-- In-frame Looker Studio -->
-    <div class="container-fluid">
+    <!-- Dashboard Section -->
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd"
-                            title="Warehouse Claims Dashboard"
-                            class="border-0 shadow-sm rounded"
-                            allowfullscreen
-                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Warehouse Claims Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Real-time warehouse claims tracking and logistics management metrics</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/050a7d77-aabe-41ab-8cd2-cb14a2af5075/page/p_4oiy5xbgfd"
+                                title="Warehouse Claims Dashboard"
+                                class="dashboard-iframe border-0 shadow-lg rounded-3"
+                                allowfullscreen
+                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-warehouse me-2"></i>
+                            Live tracking of warehouse operations, claims processing, and logistics performance
+                        </p>
                     </div>
                 </div>
             </div>

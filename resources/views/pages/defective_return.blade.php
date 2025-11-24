@@ -27,21 +27,40 @@
     <!-- Fact End -->   
 
     <!-- In-frame Looker Studio -->
-    <div class="container-fluid">
+    <!-- Dashboard Section -->
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <div class="d-flex align-items-center justify-content-center bg-light">
-                            <h1 class="text-secondary fw-bold">ON PROGRESS</h1>
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Defective Return Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Track and analyze defective product returns and quality issues</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <div class="d-flex align-items-center justify-content-center bg-light rounded-3 shadow-sm">
+                                <div class="text-center p-4">
+                                    <h1 class="text-secondary fw-bold mb-3">ON PROGRESS</h1>
+                                    <p class="text-muted">Dashboard sedang dalam pengembangan</p>
+                                </div>
+                            </div>
+                            <!-- Uncomment when ready to activate
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
+                                title="Defective Return Dashboard"
+                                class="dashboard-iframe border-0 shadow-lg rounded-3"
+                                allowfullscreen
+                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            -->
                         </div>
-                        <!-- Uncomment when ready to activate
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
-                            title="Defective Return Dashboard"
-                            class="border-0 shadow-sm rounded"
-                            allowfullscreen
-                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-                        -->
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-tools me-2"></i>
+                            Coming soon: Interactive defective return tracking and analysis
+                        </p>
                     </div>
                 </div>
             </div>

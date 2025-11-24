@@ -17,18 +17,33 @@
     </div>
     <!-- Fact End -->
     <!-- Dashboard Section -->
-    <div class="container-fluid py-5">
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Daily Performance Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Daily quality performance metrics and production indicators</p>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/d9942398-d643-44a5-8e86-edb77dec3268/page/p_rikxq8h2od"
-                                frameborder="0"
-                                allowfullscreen
-                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-                                title="Daily Performance Dashboard"
-                                class="border-0 shadow-sm rounded">
-                        </iframe>
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/d9942398-d643-44a5-8e86-edb77dec3268/page/p_rikxq8h2od"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                    title="Daily Performance Dashboard"
+                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-chart-bar me-2"></i>
+                            Daily tracking of quality metrics and production performance
+                        </p>
                     </div>
                 </div>
             </div>

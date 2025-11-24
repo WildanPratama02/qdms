@@ -53,22 +53,41 @@
     <!-- Fact End -->
 
       <!-- Dashboard Section -->
-    <div class="container-fluid py-5">
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">RFT Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Right First Time quality metrics and production statistics</p>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <div class="text-center p-5">
-                        <h1 class="text-secondary fw-bold d-block mb-4">ON PROGRESS CONNECT TO ERP</h1>
-                        <!-- Placeholder for future iframe
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
                         <div class="ratio ratio-16x9">
+                            <div class="d-flex align-items-center justify-content-center bg-light rounded-3 shadow-sm">
+                                <div class="text-center p-4">
+                                    <h1 class="text-secondary fw-bold mb-3">ON PROGRESS CONNECT TO ERP</h1>
+                                    <p class="text-muted mb-0">Dashboard sedang dalam proses integrasi dengan ERP system</p>
+                                </div>
+                            </div>
+                            <!-- Uncomment when ready to activate
                             <iframe src="https://lookerstudio.google.com/embed/reporting/75f78948-575c-4ef4-aca3-73cfa2a8eaeb/page/kGm6D"
                                     frameborder="0"
                                     allowfullscreen
                                     sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-                                    title="RFT Dashboard">
+                                    title="RFT Dashboard"
+                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
                             </iframe>
+                            -->
                         </div>
-                        -->
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-link me-2"></i>
+                            Coming soon: ERP integration for real-time RFT tracking and analysis
+                        </p>
                     </div>
                 </div>
             </div>

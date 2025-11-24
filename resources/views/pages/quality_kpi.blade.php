@@ -55,18 +55,33 @@
     <!-- Fact End -->
 
     <!-- Dashboard Section -->
-    <div class="container-fluid py-5">
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Quality KPI Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Comprehensive quality key performance indicators and metrics</p>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/79a8c7b1-4c89-4eef-a465-bb10c600ab15/page/p_2ul6f30yfd"
-                                frameborder="0"
-                                allowfullscreen
-                                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-                                title="Quality KPI Dashboard"
-                                class="border-0 shadow-sm rounded">
-                        </iframe>
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://lookerstudio.google.com/embed/reporting/79a8c7b1-4c89-4eef-a465-bb10c600ab15/page/p_2ul6f30yfd"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                                    title="Quality KPI Dashboard"
+                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-chart-line me-2"></i>
+                            Real-time quality metrics with interactive data visualization
+                        </p>
                     </div>
                 </div>
             </div>

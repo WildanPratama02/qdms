@@ -55,37 +55,44 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid px-0">
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            {{-- <ol class="carousel-indicators">
-                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-            </ol> --}}
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="/asset/background.jpg" class="d-block w-100" alt="">
-                    <div class="carousel-caption">
-                        <div class="container carousel-content">
+    <div class="company-vision-section position-relative overflow-hidden">
+        <div class="vision-background">
+            <img src="/asset/background.jpg" class="w-100 h-100" alt="Company Background" style="object-fit: cover;">
+        </div>
+        <div class="vision-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-10 mx-auto">
+                        <div class="vision-content text-white text-center" style="position: relative; z-index: 100;">
+                            <!-- Vision -->
+                            <div class="vision-item mb-5 mb-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="vision-title h3 h2-lg mb-4">VISI</h2>
+                                <p class="vision-text fs-5 fs-lg-4 mb-2">
+                                    Menjadi perusahaan yang paling kreatif, dapat diandalkan dan dipercaya bagi mitra kami.
+                                </p>
+                                <p class="vision-text-en fst-italic fs-6 fs-lg-5">
+                                    "Be the most creative, trusted and reliable manufacturing source for our partners"
+                                </p>
+                            </div>
 
-                            <div> <br><br><br><br><br><br> </div>
-                            <h1 class="text-white animated fadeInRight"><b>VISI</b></h1>
-                            <h4 class="text-white animated fadeInUp">Menjadi perusahaan yang paling kreatif, dapat
-                                diandalkan dan dipercaya bagi mitra kami. <br /><br>
+                            <!-- Mission -->
+                            <div class="vision-item mb-5 mb-lg-5 wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="vision-title h3 h2-lg mb-4">MISI</h2>
+                                <p class="vision-text fs-5 fs-lg-4 mb-2">
+                                    Menjadi perusahaan yang paling kreatif, dapat diandalkan dan dipercaya bagi mitra kami.
+                                </p>
+                                <p class="vision-text-en fst-italic fs-6 fs-lg-5">
+                                    "Be the most creative, trusted and reliable manufacturing source for our partners"
+                                </p>
+                            </div>
 
-                                “Be the most creative, trusted and reliable manufacturing source for our partners”.</h4>
-                            <br><br><br>
-
-                            <h1 class="text-white animated fadeInRight"><b>MISI</b></h1>
-                            <h4 class="text-white animated fadeInUp">"Menjadi perusahaan yang paling kreatif, dapat
-                                diandalkan dan dipercaya bagi mitra kami. <br /><br>
-
-                                “Be the most creative, trusted and reliable manufacturing source for our partners”.</h4>
-                            <br><br><br>
-
-                            <h1 class="text-white animated fadeInRight"><b>VALUE</b></h1>
-                            <h4 class="text-white animated fadeInUp">GOOD PEOPLE, GOOD CULTURE, GOOD COMPANY.</h4>
-                            <br><br><br>
-
+                            <!-- Value -->
+                            <div class="vision-item wow fadeInUp" data-wow-delay="0.6s">
+                                <h2 class="vision-title h3 h2-lg mb-4">VALUE</h2>
+                                <p class="vision-text fs-4 fs-lg-3 fw-bold">
+                                    GOOD PEOPLE, GOOD CULTURE, GOOD COMPANY
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,109 +109,127 @@
     </div>
     <!-- Fact End -->
 
-    <!-- About Start -->
-    <div class="container-fluid px-0">
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            {{-- <ol class="carousel-indicators">
-                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-            </ol> --}}
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="/asset/QC.jpg" class="d-block w-100" alt="">
-                    <div class="carousel-caption">
-                        <div class="container carousel-content">
+    <!-- Quality Vision Start -->
+    <div class="quality-vision-section position-relative overflow-hidden">
+        <div class="quality-background">
+            <img src="/asset/QC.jpg" class="w-100 h-100" alt="Quality Background" style="object-fit: cover;">
+        </div>
+        <div class="quality-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-10 mx-auto">
+                        <div class="quality-content text-white text-center" style="position: relative; z-index: 100;">
+                            <!-- Vision -->
+                            <div class="quality-item mb-5 mb-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+                                <h2 class="quality-title h3 h2-lg mb-4">VISI</h2>
+                                <p class="quality-text fs-5 fs-lg-4 mb-2">
+                                    Menjadi perusahaan manufaktur Adidas nomor satu di dunia
+                                </p>
+                                <p class="quality-text-en fst-italic fs-6 fs-lg-5">
+                                    "#1 Adidas manufacturer in the world"
+                                </p>
+                            </div>
 
-                            <div> <br><br></div>
-                            <h1 class="text-white animated fadeInRight"><b>VISI</b></h1>
-                            <h4 class="text-white animated fadeInUp">Menjadi perusahaan manufaktur Adidas nomor satu di
-                                dunia”<br /><br>
-
-                                “#1 Adidas manufacturer in the world"</h4> <br><br>
-
-                            <h1 class="text-white animated fadeInRight"><b>MISI</b></h1>
-                            <h4 class="text-white animated fadeInUp">"Menyediakan Produk yang bagus dengan harga paling
-                                kompetitif di pasar"<br /><br>
-
-                                “Supply beautiful product with the most competitive price to the market”</h4> <br><br><br>
-
+                            <!-- Mission -->
+                            <div class="quality-item wow fadeInUp" data-wow-delay="0.4s">
+                                <h2 class="quality-title h3 h2-lg mb-4">MISI</h2>
+                                <p class="quality-text fs-5 fs-lg-4 mb-2">
+                                    Menyediakan Produk yang bagus dengan harga paling kompetitif di pasar
+                                </p>
+                                <p class="quality-text-en fst-italic fs-6 fs-lg-5">
+                                    "Supply beautiful product with the most competitive price to the market"
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Quality Vision End -->
 
-    <div class="container-fluid bg-info py-5">
-        <div class="container">
-            <h2 class="text-white text-center">OUR FOCUS</h2>
-        </div>
-    </div>
-<br><br>
-<div class="container-fluid py-5">
+    <!-- Our Focus Section -->
+<div class="our-focus-section py-5 py-lg-6">
     <div class="container">
         <!-- Section Header -->
-        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-            <h2 class="text-primary">Our Focus</h2>
+        <div class="text-center mx-auto pb-4 pb-lg-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+            <h2 class="focus-header h2 h1-lg text-primary mb-3">Our Focus</h2>
+            <p class="focus-subtitle lead text-muted">Key areas that drive our quality management excellence</p>
         </div>
 
         <!-- Focus Grid -->
-        <div class="row g-4">
+        <div class="row g-3 g-lg-4 g-xl-5">
             <!-- Left Side - KPI Score Image -->
-            <div class="col-12 col-lg-4">
-                <div class="h-100">
-                    <img src="/asset/q-kpi score.png" alt="Quality KPI Score" class="img-fluid rounded h-100" style="object-fit: cover;">
+            <div class="col-12 col-lg-5 order-lg-1">
+                <div class="kpi-card wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="kpi-image-container">
+                        <img src="/asset/q-kpi score.png" alt="Quality KPI Score" class="kpi-image w-100">
+                        <div class="kpi-overlay text-white text-center p-4">
+                            <h3 class="kpi-title h4 mb-2">Quality KPI Score</h3>
+                            <p class="kpi-description mb-0">Real-time performance metrics and quality indicators</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Side - Project Items -->
-            <div class="col-12 col-lg-8">
-                <div class="row g-4 h-100">
-                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="project-item h-100">
-                            <div class="project-img h-100">
-                                <img src="asset/audit.png" class="img-fluid w-100 h-100 rounded" alt="Audit" style="object-fit: cover;">
-                                <div class="project-content">
-                                    <a href="#" class="text-center">
-                                        <h3 class="text-secondary">Audit</h3>
-                                    </a>
+            <!-- Right Side - Focus Items -->
+            <div class="col-12 col-lg-7 order-lg-2">
+                <div class="row g-3 g-lg-4 g-xl-5 h-100">
+                    <!-- Audit -->
+                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="focus-item h-100">
+                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                <img src="/asset/audit.png" class="focus-img w-100" alt="Audit" style="object-fit: cover; height: 200px;">
+                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                    <div class="text-center text-white p-3">
+                                        <h4 class="focus-title h5 mb-2">Audit</h4>
+                                        <p class="focus-desc small mb-0 d-none d-md-block">Internal and external quality audits</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="project-item h-100">
-                            <div class="project-img h-100">
-                                <img src="asset/rft.png" class="img-fluid w-100 h-100 rounded" alt="RFT" style="object-fit: cover;">
-                                <div class="project-content">
-                                    <a href="#" class="text-center">
-                                        <h3 class="text-secondary">RFT</h3>
-                                    </a>
+
+                    <!-- RFT -->
+                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="focus-item h-100">
+                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                <img src="/asset/rft.png" class="focus-img w-100" alt="RFT" style="object-fit: cover; height: 200px;">
+                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                    <div class="text-center text-white p-3">
+                                        <h4 class="focus-title h5 mb-2">RFT</h4>
+                                        <p class="focus-desc small mb-0 d-none d-md-block">Right First Time quality metrics</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".7s">
-                        <div class="project-item h-100">
-                            <div class="project-img h-100">
-                                <img src="asset/kpi.png" class="img-fluid w-100 h-100 rounded" alt="Q-KPI" style="object-fit: cover;">
-                                <div class="project-content">
-                                    <a href="#" class="text-center">
-                                        <h3 class="text-secondary">Q-KPI</h3>
-                                    </a>
+
+                    <!-- Q-KPI -->
+                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="focus-item h-100">
+                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                <img src="/asset/kpi.png" class="focus-img w-100" alt="Q-KPI" style="object-fit: cover; height: 200px;">
+                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                    <div class="text-center text-white p-3">
+                                        <h4 class="focus-title h5 mb-2">Q-KPI</h4>
+                                        <p class="focus-desc small mb-0 d-none d-md-block">Quality Key Performance Indicators</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 wow fadeIn" data-wow-delay=".9s">
-                        <div class="project-item h-100">
-                            <div class="project-img h-100">
-                                <img src="asset/ambassador.jpg" class="img-fluid w-100 h-100 rounded" alt="Ambassador" style="object-fit: cover;">
-                                <div class="project-content">
-                                    <a href="#" class="text-center">
-                                        <h4 class="text-secondary">Ambassador</h4>
-                                    </a>
+
+                    <!-- Ambassador -->
+                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="focus-item h-100">
+                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                <img src="/asset/ambassador.jpg" class="focus-img w-100" alt="Ambassador" style="object-fit: cover; height: 200px;">
+                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                    <div class="text-center text-white p-3">
+                                        <h4 class="focus-title h5 mb-2">Ambassador</h4>
+                                        <p class="focus-desc small mb-0 d-none d-md-block">Quality champion programs</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -215,644 +240,38 @@
     </div>
 </div>
 
-
-   
-  
-    
 <br><br>
     <hr>
 
     <!-- Dashboard Embed Section -->
-    <div class="container-fluid py-5">
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Performance Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Real-time quality metrics and performance indicators</p>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://drive.google.com/file/d/1i8xSNojIfhgDLi9Oh2sPFC00ZHhbn0Ib/preview"
-                                allow="autoplay"
-                                title="Dashboard Preview"
-                                class="border-0 shadow-sm rounded">
-                        </iframe>
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://drive.google.com/file/d/1i8xSNojIfhgDLi9Oh2sPFC00ZHhbn0Ib/preview"
+                                    allow="autoplay"
+                                    title="Dashboard Preview"
+                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-info-circle me-2"></i>
+                            Interactive dashboard with real-time quality management data
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <!-- Services Start -->
-    <!-- <div class="container-fluid services py-5 mb-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Our Services</h5>
-                <h1>Services Built Specifically For Your Business</h1>
-            </div>
-            <div class="row g-5 services-inner">
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fa fa-code fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">Web Design</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                    Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fa fa-file-code fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">Web Development</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                    Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fa fa-external-link-alt fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">UI/UX Design</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                    Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fas fa-user-secret fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">Web Cecurity</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut
-                                    interdum. Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fa fa-envelope-open fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">Digital Marketing</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut
-                                    interdum. Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="services-item bg-light">
-                        <div class="p-4 text-center services-content">
-                            <div class="services-content-icon">
-                                <i class="fas fa-laptop fa-7x mb-4 text-primary"></i>
-                                <h4 class="mb-3">Programming</h4>
-                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut
-                                    interdum. Aliquam dolor eget urna ultricies tincidunt.</p>
-                                <a href="" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read
-                                    More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Services End -->
-
-
-    <!-- Project Start -->
-    <!-- <div class="container-fluid project py-5 mb-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Our Project</h5>
-                <h1>Our Recently Completed Projects</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-1.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">Web design</h4>
-                                    <p class="m-0 text-white">Web Analysis</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-2.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">Cyber Security</h4>
-                                    <p class="m-0 text-white">Cyber Security Core</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-3.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">Mobile Info</h4>
-                                    <p class="m-0 text-white">Upcomming Phone</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-4.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">Web Development</h4>
-                                    <p class="m-0 text-white">Web Analysis</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-5.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">Digital Marketing</h4>
-                                    <p class="m-0 text-white">Marketing Analysis</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="project-item">
-                        <div class="project-img">
-                            <img src="img/project-6.jpg" class="img-fluid w-100 rounded" alt="">
-                            <div class="project-content">
-                                <a href="#" class="text-center">
-                                    <h4 class="text-secondary">keyword Research</h4>
-                                    <p class="m-0 text-white">keyword Analysis</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Project End -->
-
-
-    <!-- Blog Start -->
-    <!-- <div class="container-fluid blog py-5 mb-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Our Blog</h5>
-                <h1>Latest Blog & News</h1>
-            </div>
-            <div class="row g-5 justify-content-center">
-                <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="blog-item position-relative bg-light rounded">
-                        <img src="img/blog-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        <span class="position-absolute px-4 py-3 bg-primary text-white rounded"
-                            style="top: -28px; right: 20px;">Web Design</span>
-                        <div class="blog-btn d-flex justify-content-between position-relative px-3"
-                            style="margin-top: -75px;">
-                            <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
-                                <a href="" class="btn text-white">Read More</a>
-                            </div>
-                            <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill ">
-                                <div class="blog-icon-1">
-                                    <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
-                                </div>
-                                <div class="blog-icon-2">
-                                    <a href="" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3"
-                                alt="">
-                            <h5 class="">By Daniel Martin</h5>
-                            <span class="text-secondary">24 March 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
-                        </div>
-                        <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
-                            <a href="" class="text-white"><small><i
-                                        class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
-                            <a href="" class="text-white"><small><i
-                                        class="fa fa-comments me-2 text-secondary"></i>5 Comments</small></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="blog-item position-relative bg-light rounded">
-                        <img src="img/blog-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        <span class="position-absolute px-4 py-3 bg-primary text-white rounded"
-                            style="top: -28px; right: 20px;">Development</span>
-                        <div class="blog-btn d-flex justify-content-between position-relative px-3"
-                            style="margin-top: -75px;">
-                            <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
-                                <a href="" class="btn text-white ">Read More</a>
-                            </div>
-                            <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill ">
-                                <div class="blog-icon-1">
-                                    <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
-                                </div>
-                                <div class="blog-icon-2">
-                                    <a href="" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3"
-                                alt="">
-                            <h5 class="">By Daniel Martin</h5>
-                            <span class="text-secondary">23 April 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
-                        </div>
-                        <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
-                            <a href="" class="text-white"><small><i
-                                        class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
-                            <a href="" class="text-white"><small><i
-                                        class="fa fa-comments me-2 text-secondary"></i>5 Comments</small></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="blog-item position-relative bg-light rounded">
-                        <img src="img/blog-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        <span class="position-absolute px-4 py-3 bg-primary text-white rounded"
-                            style="top: -28px; right: 20px;">Mobile App</span>
-                        <div class="blog-btn d-flex justify-content-between position-relative px-3"
-                            style="margin-top: -75px;">
-                            <div class="blog-icon btn btn-secondary px-3 rounded-pill my-auto">
-                                <a href="" class="btn text-white ">Read More</a>
-                            </div>
-                            <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill ">
-                                <div class="blog-icon-1">
-                                    <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
-                                </div>
-                                <div class="blog-icon-2">
-                                    <a href="" class="btn me-1"><i class="fab fa-facebook-f text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-twitter text-white"></i></a>
-                                    <a href="" class="btn me-1"><i class="fab fa-instagram text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-content text-center position-relative px-3" style="margin-top: -25px;">
-                            <img src="img/admin.jpg" class="img-fluid rounded-circle border border-4 border-white mb-3"
-                                alt="">
-                            <h5 class="">By Daniel Martin</h5>
-                            <span class="text-secondary">30 jan 2023</span>
-                            <p class="py-2">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum.
-                                Aliquam dolor eget urna ultricies tincidunt libero sit amet</p>
-                        </div>
-                        <div
-                            class="blog-coments d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
-                            <a href="" class="text-white"><small><i
-                                        class="fas fa-share me-2 text-secondary"></i>5324 Share</small></a>
-                            <a href="" class="text-white"><small><i
-                                        class="fa fa-comments me-2 text-secondary"></i>5 Comments</small></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Blog End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-fluid py-5 mb-5 team">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Our Team</h5>
-                <h1>Meet our expert Team</h1>
-            </div>
-            <div class="owl-carousel team-carousel wow fadeIn" data-wow-delay=".5s">
-                <div class="rounded team-item">
-                    <div class="team-content">
-                        <div class="team-img-icon">
-                            <div class="team-img rounded-circle">
-                                <img src="img/team-1.jpg" class="img-fluid w-100 rounded-circle" alt="">
-                            </div>
-                            <div class="team-name text-center py-3">
-                                <h4 class="">Full Name</h4>
-                                <p class="m-0">Designation</p>
-                            </div>
-                            <div class="team-icon d-flex justify-content-center pb-4">
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded team-item">
-                    <div class="team-content">
-                        <div class="team-img-icon">
-                            <div class="team-img rounded-circle">
-                                <img src="img/team-2.jpg" class="img-fluid w-100 rounded-circle" alt="">
-                            </div>
-                            <div class="team-name text-center py-3">
-                                <h4 class="">Full Name</h4>
-                                <p class="m-0">Designation</p>
-                            </div>
-                            <div class="team-icon d-flex justify-content-center pb-4">
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded team-item">
-                    <div class="team-content">
-                        <div class="team-img-icon">
-                            <div class="team-img rounded-circle">
-                                <img src="img/team-3.jpg" class="img-fluid w-100 rounded-circle" alt="">
-                            </div>
-                            <div class="team-name text-center py-3">
-                                <h4 class="">Full Name</h4>
-                                <p class="m-0">Designation</p>
-                            </div>
-                            <div class="team-icon d-flex justify-content-center pb-4">
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded team-item">
-                    <div class="team-content">
-                        <div class="team-img-icon">
-                            <div class="team-img rounded-circle">
-                                <img src="img/team-4.jpg" class="img-fluid w-100 rounded-circle" alt="">
-                            </div>
-                            <div class="team-name text-center py-3">
-                                <h4 class="">Full Name</h4>
-                                <p class="m-0">Designation</p>
-                            </div>
-                            <div class="team-icon d-flex justify-content-center pb-4">
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-secondary text-white rounded-circle m-1" href=""><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
-
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid testimonial py-5 mb-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Our Testimonial</h5>
-                <h1>Our Client Saying!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay=".5s">
-                <div class="testimonial-item border p-4">
-                    <div class="d-flex align-items-center">
-                        <div class="">
-                            <img src="img/testimonial-1.jpg" alt="">
-                        </div>
-                        <div class="ms-4">
-                            <h4 class="text-secondary">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex pe-5">
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top mt-4 pt-3">
-                        <p class="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam
-                            dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam
-                            mi.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item border p-4">
-                    <div class=" d-flex align-items-center">
-                        <div class="">
-                            <img src="img/testimonial-2.jpg" alt="">
-                        </div>
-                        <div class="ms-4">
-                            <h4 class="text-secondary">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex pe-5">
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top mt-4 pt-3">
-                        <p class="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam
-                            dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam
-                            mi.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item border p-4">
-                    <div class=" d-flex align-items-center">
-                        <div class="">
-                            <img src="img/testimonial-3.jpg" alt="">
-                        </div>
-                        <div class="ms-4">
-                            <h4 class="text-secondary">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex pe-5">
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top mt-4 pt-3">
-                        <p class="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam
-                            dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam
-                            mi.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item border p-4">
-                    <div class=" d-flex align-items-center">
-                        <div class="">
-                            <img src="img/testimonial-4.jpg" alt="">
-                        </div>
-                        <div class="ms-4">
-                            <h4 class="text-secondary">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex pe-5">
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                                <i class="fas fa-star me-1 text-primary"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top mt-4 pt-3">
-                        <p class="mb-0">Lorem ipsum dolor sit amet elit. Sed efficitur quis purus ut interdum aliquam
-                            dolor eget urna. Nam volutpat libero sit amet leo cursus, ac viverra eros morbi quis quam
-                            mi.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --> 
-
-    <!-- Testimonial End
-
-
-    <!-- Contact Start -->
-    <!-- <div class="container-fluid py-5 mb-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-                <h5 class="text-primary">Get In Touch</h5>
-                <h1 class="mb-3">Contact for any query</h1>
-                <p class="mb-2">The contact form is currently inactive. Get a functional and working contact form
-                    with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done.
-                    <a href="https://htmlcodex.com/contact-form">Download Now</a>.
-                </p>
-            </div>
-            <div class="contact-detail position-relative p-5">
-                <div class="row g-5 mb-5 justify-content-center">
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle"
-                                style="width: 64px; height: 64px;">
-                                <i class="fas fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Address</h4>
-                                <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">23
-                                    rank Str, NY</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle"
-                                style="width: 64px; height: 64px;">
-                                <i class="fa fa-phone text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Call Us</h4>
-                                <a class="h5" href="tel:+0123456789" target="_blank">+012 3456 7890</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
-                        <div class="d-flex bg-light p-3 rounded">
-                            <div class="flex-shrink-0 btn-square bg-secondary rounded-circle"
-                                style="width: 64px; height: 64px;">
-                                <i class="fa fa-envelope text-white"></i>
-                            </div>
-                            <div class="ms-3">
-                                <h4 class="text-primary">Email Us</h4>
-                                <a class="h5" href="mailto:info@example.com" target="_blank">info@example.com</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                        <div class="p-5 h-100 rounded contact-map">
-                            <iframe class="rounded w-100 h-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4710403339755!2d-73.82241512404069!3d40.685622471397615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26749046ee14f%3A0xea672968476d962c!2s123rd%20St%2C%20Queens%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1686493221834!5m2!1sen!2sbd"
-                                style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                        <div class="p-5 rounded contact-form">
-                            <div class="mb-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4">
-                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email">
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Project">
-                            </div>
-                            <div class="mb-4">
-                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Message"></textarea>
-                            </div>
-                            <div class="text-start">
-                                <button class="btn bg-primary text-white py-3 px-5" type="button">Send
-                                    Message</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Contact End -->
 @endsection

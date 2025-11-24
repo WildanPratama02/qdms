@@ -53,15 +53,30 @@
     <!-- Fact End -->   
 
     <!-- Dashboard Section -->
-    <div class="container-fluid py-5">
+    <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Humidity Control Dashboard</h2>
+                <p class="dashboard-subtitle lead text-muted">Real-time environmental monitoring and humidity control systems</p>
+            </div>
+
             <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://enggtemp.weebly.com/"
-                                title="Humidity Control Dashboard"
-                                class="border-0 shadow-sm rounded">
-                        </iframe>
+                <div class="col-12 col-lg-11 col-xl-10">
+                    <div class="dashboard-container">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://enggtemp.weebly.com/"
+                                    title="Humidity Control Dashboard"
+                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Dashboard Info -->
+                    <div class="dashboard-info text-center mt-3 mt-lg-4">
+                        <p class="dashboard-note small text-muted mb-0">
+                            <i class="fas fa-tint me-2"></i>
+                            Environmental monitoring dashboard with humidity and temperature tracking
+                        </p>
                     </div>
                 </div>
             </div>

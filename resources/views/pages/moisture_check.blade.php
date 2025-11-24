@@ -18,14 +18,36 @@
     <!-- Contact Start -->
     <div class="container-fluid py-5 mt-5">
         <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://lookerstudio.google.com/embed/reporting/eb46f77a-0351-4e0c-9fa3-09872778ed59/page/Tr41D"
-                            title="Moisture Dashboard"
-                            class="border-0 shadow-sm rounded"
-                            allowfullscreen
-                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="row">
+                <!-- Dashboard Section -->
+                <div class="col-12 mb-5">
+                    <div class="dashboard-section">
+                        <!-- Section Header -->
+                        <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
+                            <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Moisture Check Dashboard</h2>
+                            <p class="dashboard-subtitle lead text-muted">Real-time moisture monitoring and quality control metrics</p>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-11 col-xl-10">
+                                <div class="dashboard-container">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://lookerstudio.google.com/embed/reporting/eb46f77a-0351-4e0c-9fa3-09872778ed59/page/Tr41D"
+                                            title="Moisture Dashboard"
+                                            class="dashboard-iframe border-0 shadow-lg rounded-3"
+                                            allowfullscreen
+                                            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+                                    </div>
+                                </div>
+                                <!-- Dashboard Info -->
+                                <div class="dashboard-info text-center mt-3 mt-lg-4">
+                                    <p class="dashboard-note small text-muted mb-0">
+                                        <i class="fas fa-tint me-2"></i>
+                                        Live moisture content monitoring and analysis dashboard
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

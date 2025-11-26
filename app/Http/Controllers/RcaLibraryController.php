@@ -33,13 +33,16 @@ class RcaLibraryController extends Controller
 
         $files = $query->paginate(12);
 
-        // Get available years for filter
+        // Get available years for filter (SQLite compatible)
         $years = UploadedFile::where('file_type', 'rca')
             ->whereNotNull('document_date')
-            ->selectRaw('YEAR(document_date) as year')
-            ->distinct()
-            ->orderBy('year', 'desc')
-            ->pluck('year');
+            ->get()
+            ->map(function ($file) {
+                return $file->document_date->year;
+            })
+            ->unique()
+            ->sortDesc()
+            ->values();
 
         // Get available categories
         $categories = UploadedFile::where('file_type', 'rca')

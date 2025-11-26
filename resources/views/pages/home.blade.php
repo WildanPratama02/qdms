@@ -6,10 +6,6 @@
     <!-- Carousel Start -->
     <div class="container-fluid px-0">
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            {{-- <ol class="carousel-indicators">
-                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-            </ol> --}}
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <img src="/asset/PWJ.png" class="d-block w-100" alt="First slide">
@@ -17,36 +13,16 @@
                         <div class="container carousel-content">
                             <h6 class="text-secondary display-1 mb-4 animated fadeInRight">QDMS</h6>
                             <h1 class="text-white animated fadeInUp">QUALITY DATA MANAGEMENT SYSTEM</h1>
-
                         </div>
                     </div>
                 </div>
-                {{-- <div class="carousel-item">
-                    <img src="/asset/rqc.jpg"class="d-block w-100" alt="Second slide">
-                    <div class="carousel-caption">
-                         <div class="container carousel-content">
-                            <h6 class="text-secondary display-1 mb-4 animated fadeInRight">QDMS</h6>
-                            <h1 class="text-white animated fadeInUp">QUALITY DATA MANAGEMENT SYSTEM</h1>
-
-                        </div>
-                    </div>
-                </div> --}}
             </div>
-            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button> --}}
         </div>
     </div>
     <!-- Carousel End -->
 
-
     <!-- Fact Start -->
-    <div class="container-fluid bg-info py-5">
+    <div class="container-fluid bg-secondary py-4">
         <div class="container">
             <h2 class="text-white text-center">VISI-MISI PERUSAHAAN</h2>
         </div>
@@ -102,7 +78,7 @@
     <!-- About End -->
 
     <!-- Fact Start -->
-    <div class="container-fluid bg-info py-5">
+    <div class="container-fluid bg-secondary py-4">
         <div class="container">
             <h2 class="text-white text-center">VISI-MISI QUALITY</h2>
         </div>
@@ -149,88 +125,117 @@
     <!-- Quality Vision End -->
 
     <!-- Our Focus Section -->
-<div class="our-focus-section py-5 py-lg-6">
-    <div class="container">
-        <!-- Section Header -->
-        <div class="text-center mx-auto pb-4 pb-lg-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-            <h2 class="focus-header h2 h1-lg text-primary mb-3">Our Focus</h2>
-            <p class="focus-subtitle lead text-muted">Key areas that drive our quality management excellence</p>
-        </div>
-
-        <!-- Focus Grid -->
-        <div class="row g-3 g-lg-4 g-xl-5">
-            <!-- Left Side - KPI Score Image -->
-            <div class="col-12 col-lg-5 order-lg-1">
-                <div class="kpi-card wow fadeInLeft" data-wow-delay=".3s">
-                    <div class="kpi-image-container">
-                        <img src="/asset/q-kpi score.png" alt="Quality KPI Score" class="kpi-image w-100">
-                        <div class="kpi-overlay text-white text-center p-4">
-                            <h3 class="kpi-title h4 mb-2">Quality KPI Score</h3>
-                            <p class="kpi-description mb-0">Real-time performance metrics and quality indicators</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="our-focus-section py-5 py-lg-6">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mx-auto pb-4 pb-lg-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+                <h2 class="focus-header h2 h1-lg text-primary mb-3">Our Focus</h2>
+                <p class="focus-subtitle lead text-muted">Key areas that drive our quality management excellence</p>
             </div>
 
-            <!-- Right Side - Focus Items -->
-            <div class="col-12 col-lg-7 order-lg-2">
-                <div class="row g-3 g-lg-4 g-xl-5 h-100">
-                    <!-- Audit -->
-                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="focus-item h-100">
-                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
-                                <img src="/asset/audit.png" class="focus-img w-100" alt="Audit" style="object-fit: cover; height: 200px;">
-                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
-                                    <div class="text-center text-white p-3">
-                                        <h4 class="focus-title h5 mb-2">Audit</h4>
-                                        <p class="focus-desc small mb-0 d-none d-md-block">Internal and external quality audits</p>
-                                    </div>
+            <!-- Focus Grid -->
+            <div class="row g-3 g-lg-4 g-xl-5">
+                <!-- Left Side - KPI Score Image -->
+                <div class="col-12 col-lg-5 order-lg-1">
+                    <div class="kpi-card wow fadeInLeft" data-wow-delay=".3s">
+                        <a href="{{ route('quality_kpi') }}" class="text-decoration-none">
+                            <div class="kpi-image-container">
+                                <img src="/asset/q-kpi score.png" alt="Quality KPI Score" class="kpi-image w-100">
+                                <div class="kpi-overlay text-white text-center p-4">
+                                    <h3 class="kpi-title h4 mb-2">Quality KPI Score</h3>
+                                    <p class="kpi-description mb-0">Real-time performance metrics and quality indicators</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+                </div>
 
-                    <!-- RFT -->
-                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="focus-item h-100">
-                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
-                                <img src="/asset/rft.png" class="focus-img w-100" alt="RFT" style="object-fit: cover; height: 200px;">
-                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
-                                    <div class="text-center text-white p-3">
-                                        <h4 class="focus-title h5 mb-2">RFT</h4>
-                                        <p class="focus-desc small mb-0 d-none d-md-block">Right First Time quality metrics</p>
+                <!-- Right Side - Focus Items -->
+                <div class="col-12 col-lg-7 order-lg-2">
+                    <div class="row g-3 g-lg-4 g-xl-5 h-100">
+                        <!-- Audit -->
+                        <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="focus-item h-100">
+                                <a href="{{ route('audit_library') }}" class="text-decoration-none">
+                                    <div
+                                        class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                        <img src="/asset/audit.png" class="focus-img w-100" alt="Audit"
+                                            style="object-fit: cover; height: 200px;">
+                                        <div
+                                            class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                            <div class="text-center text-white p-3">
+                                                <h4 class="focus-title h5 mb-2">Audit</h4>
+                                                <p class="focus-desc small mb-0 d-none d-md-block">Internal and external
+                                                    quality
+                                                    audits</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Q-KPI -->
-                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="focus-item h-100">
-                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
-                                <img src="/asset/kpi.png" class="focus-img w-100" alt="Q-KPI" style="object-fit: cover; height: 200px;">
-                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
-                                    <div class="text-center text-white p-3">
-                                        <h4 class="focus-title h5 mb-2">Q-KPI</h4>
-                                        <p class="focus-desc small mb-0 d-none d-md-block">Quality Key Performance Indicators</p>
+                        <!-- RFT -->
+                        <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="focus-item h-100">
+                                <a href="{{ route('rft') }}" class="text-decoration-none">
+                                    <div
+                                        class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                        <img src="/asset/rft.png" class="focus-img w-100" alt="RFT"
+                                            style="object-fit: cover; height: 200px;">
+                                        <div
+                                            class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                            <div class="text-center text-white p-3">
+                                                <h4 class="focus-title h5 mb-2">RFT</h4>
+                                                <p class="focus-desc small mb-0 d-none d-md-block">Right First Time quality
+                                                    metrics</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Ambassador -->
-                    <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="focus-item h-100">
-                            <div class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
-                                <img src="/asset/ambassador.jpg" class="focus-img w-100" alt="Ambassador" style="object-fit: cover; height: 200px;">
-                                <div class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
-                                    <div class="text-center text-white p-3">
-                                        <h4 class="focus-title h5 mb-2">Ambassador</h4>
-                                        <p class="focus-desc small mb-0 d-none d-md-block">Quality champion programs</p>
+                        <!-- Q-KPI -->
+                        <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="focus-item h-100">
+                                <a href="{{ route('daily_performance') }}" class="text-decoration-none">
+                                    <div
+                                        class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                        <img src="/asset/kpi.png" class="focus-img w-100" alt="Q-KPI"
+                                            style="object-fit: cover; height: 200px;">
+                                        <div
+                                            class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                            <div class="text-center text-white p-3">
+                                                <h4 class="focus-title h5 mb-2">Quality Performance</h4>
+                                                <p class="focus-desc small mb-0 d-none d-md-block">Daily Quality Key
+                                                    Performance
+                                                    Indicators</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Ambassador -->
+                        <div class="col-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="focus-item h-100">
+                                <a href="{{ route('quality_ambassador') }}" class="text-decoration-none">
+                                    <div
+                                        class="focus-card h-100 position-relative overflow-hidden rounded shadow-sm border-0">
+                                        <img src="/asset/ambassador.jpg" class="focus-img w-100" alt="Ambassador"
+                                            style="object-fit: cover; height: 200px;">
+                                        <div
+                                            class="focus-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 transition-all">
+                                            <div class="text-center text-white p-3">
+                                                <h4 class="focus-title h5 mb-2">Ambassador</h4>
+                                                <p class="focus-desc small mb-0 d-none d-md-block">Quality champion programs
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -238,28 +243,20 @@
             </div>
         </div>
     </div>
-</div>
 
-<br><br>
+    <br><br>
     <hr>
 
     <!-- Dashboard Embed Section -->
     <div class="dashboard-section py-4 py-lg-5">
         <div class="container">
-            <!-- Section Header -->
-            <div class="text-center mx-auto mb-4 mb-lg-5" style="max-width: 600px;">
-                <h2 class="dashboard-title h3 h2-lg text-primary mb-3">Performance Dashboard</h2>
-                <p class="dashboard-subtitle lead text-muted">Real-time quality metrics and performance indicators</p>
-            </div>
-
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10">
                     <div class="dashboard-container">
                         <div class="ratio ratio-16x9">
                             <iframe src="https://drive.google.com/file/d/1i8xSNojIfhgDLi9Oh2sPFC00ZHhbn0Ib/preview"
-                                    allow="autoplay"
-                                    title="Dashboard Preview"
-                                    class="dashboard-iframe border-0 shadow-lg rounded-3">
+                                allow="autoplay" title="Dashboard Preview"
+                                class="dashboard-iframe border-0 shadow-lg rounded-3">
                             </iframe>
                         </div>
                     </div>
@@ -267,7 +264,7 @@
                     <div class="dashboard-info text-center mt-3 mt-lg-4">
                         <p class="dashboard-note small text-muted mb-0">
                             <i class="fas fa-info-circle me-2"></i>
-                            Interactive dashboard with real-time quality management data
+                            Introduction to Quality Data Management System
                         </p>
                     </div>
                 </div>

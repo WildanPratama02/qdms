@@ -1,133 +1,61 @@
-# UI Design & Responsiveness Guide
+## Sections
 
-*Laravel Blade + Bootstrap 5*
+### 1. Inline Inspection
+**Description:**  
+Inline Inspection is a quality control process conducted at different stages of production to detect defects before mass production. Its purpose is to ensure quality standards, reduce waste, and improve efficiency.
 
-## Overview
+**Key Functions:**
+- Early Defect Detection
+- Quality Control Checkpoints
+- Process Monitoring
+- Immediate Corrective Actions
+- Improve Efficiency
 
-This document defines standards and implementation rules for building
-responsive UI in the Public Pages using Laravel Blade and Bootstrap 5.
-The goal is to ensure all pages scale gracefully across desktop, tablet,
-and mobile devices, with special focus on navigation, layouts, and UI
-components.
+---
 
-## Responsive Design Rules
+### 2. CTP/CTQ Process
+**Description:**  
+In shoe manufacturing, product quality depends heavily on critical processes. These processes are monitored using Critical to Process (CTP) and Critical to Quality (CTQ) controls.
 
-### Breakpoints (Bootstrap 5)
+**Key Points:**
+- Identify process stages critical to quality
+- Ensure accuracy of product requirements
+- Detect variations early
+- Validate final product compliance
 
-  Device        Width     Bootstrap Prefix
-  ------------- --------- ------------------
-  Extra Small   \<576px   col-12
-  Small         ≥576px    col-sm-\*
-  Medium        ≥768px    col-md-\*
-  Large         ≥992px    col-lg-\*
-  Extra Large   ≥1200px   col-xl-\*
+---
 
-## Navigation (Navbar + Offcanvas)
+### 3. PQR (Product Quality Review)
+**Description:**  
+Product Quality Review (PQR) is a periodic evaluation of produced quality based on key performance indicators. It helps detect recurring issues, analyze problems, and improve quality consistency.
 
-### Desktop View:
+**Objectives:**
+- Evaluate production consistency
+- Validate test results & standards
+- Detect trends and root causes
+- Optimize production efficiency
 
--   Full navigation bar visible
--   Logo aligned left
--   Menu items centered or right-aligned
--   Action buttons (Login, Profile, Logout) stay on the right
--   Embed Code looker Dashboard responsive Size
+### 4. Cutting Dies
+**Description:**  
+Cutting dies refer to mold/tool inspection accuracy. Ensures cutting precision to be used in long-term mass production. Focuses on defect detection, wear tracking, and process optimization.
 
-### Mobile/Tablet View (md and below):
+**Key Concepts:**
+- Dimensional accuracy
+- Tool maintenance scheduling
+- Wear detection
+- Quality compliance
 
--   Navbar collapses into right-side offcanvas sidebar
--   Toggle button (hamburger) appears on the right
--   Font-size and icon sizes reduced using Bootstrap utilities (fs-6,
-    fs-7)
--   Embed Code looker Dashboard responsive Size
+---
 
+## Shared UI Section Template
 
-### Blade Structure:
-
-resources/views/layouts/app.blade.php\
-resources/views/components/navbar.blade.php
-
-### Required Classes:
-```{=html}
-<button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-```
-## Page Layout Structure (Blade)
-
-``` blade
-@extends('layouts.app')
-
-@section('content')
-<div class="container py-4">
-    <div class="row gx-4 gy-4">
-        <!-- Page content goes here -->
-    </div>
-</div>
-@endsection
-```
-
-## UI Component Rules
-
-### Cards
-
-``` html
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card shadow-sm h-100">
-    <div class="card-body">
-```
-
-### Forms
-
-``` html
-<form class="row g-3">
-  <div class="col-12 col-md-6">
-    <input type="text" class="form-control" placeholder="Enter value">
-```
-
-### Tables
-
-``` html
-<div class="table-responsive">
-  <table class="table table-striped table-bordered align-middle">
-```
-
-### Images
-
-``` html
-<img src="image.jpg" class="img-fluid rounded" alt="Responsive Image">
-```
-
-## Utility Classes to Use
-
-  Purpose        Bootstrap Class
-  -------------- -----------------------------------------------------
-  Full width     w-100, container-fluid
-  Spacing        px-3, py-2, mx-auto
-  Alignment      d-flex, justify-content-between, align-items-center
-  Visibility     d-none d-lg-block
-  Overflow fix   text-wrap, flex-wrap
-
-## Avoid These
-
--   Inline CSS styling
--   Fixed width/heights (width:600px)
--   Hardcoded pixel values
--   Custom CSS unless absolutely needed
-
-## Files Impacted
-
-  Component              Blade File
-  ---------------------- ---------------------------------------------
-  Navbar                 resources/views/components/navbar.blade.php
-  Layout Base            resources/views/layouts/app.blade.php
-  Public Pages           resources/views/public/\*.blade.php
-  Shared UI Components   resources/views/components/\*.blade.php
-
-## Quick Testing Checklist
-
-  Check                 Desktop   Tablet   Mobile
-  --------------------- --------- -------- --------
-  Navbar visible        ☑         ☐        ☐
-  Offcanvas works       ☐         ☑        ☑
-  Cards stack           ☐         ☑        ☑
-  Tables scrollable     ☐         ☑        ☑
-  Buttons readable      ☑         ☑        ☑
-  No content overflow   ☑         ☑        ☑
+```json
+{
+  "section_template": {
+    "title": "string",
+    "image_position": "left",
+    "image_placeholder": true,
+    "text_content": "string (html or markdown)",
+    "bullets": ["array", "of", "points"]
+  }
+}

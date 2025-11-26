@@ -75,7 +75,7 @@
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="text-center mb-4">
-                    <img src="{{ asset('img/logo.png') }}" alt="QDMS Logo" class="logo-img">
+                    <img src="{{ asset('asset\logo biru.png') }}" alt="QDMS Logo" class="logo-img">
                 </div>
                 <div class="card login-card">
                     <div class="login-header text-center">

@@ -15,13 +15,13 @@ Route::post('/login', [AuthController::class, 'login']);
 // Protected Admin Routes
 Route::prefix('admin')->middleware(['auth'])->group(function () {
     // Admin Dashboard
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
     // File Management
     Route::get('/files', [FileController::class, 'index'])->name('admin.files.index');
-    Route::post('/files/upload', [FileController::class, 'store'])->name('admin.files.store');
+    Route::post('/files', [FileController::class, 'store'])->name('admin.files.store');
     Route::delete('/files/{id}', [FileController::class, 'destroy'])->name('admin.files.destroy');
 
     // Quality Ambassador Admin Routes
@@ -52,11 +52,11 @@ Route::get('/quality_production', function () {
 
 Route::get('/rft', function () {
     return view('pages.rft');
-});
+})->name('rft');
 
 Route::get('/quality_kpi', function () {
     return view('pages.quality_kpi');
-});
+})->name('quality_kpi');
 
 Route::get('/defective_return', function () {
     return view('pages.defective_return');
@@ -76,7 +76,7 @@ Route::get('/moisture_check', function () {
 
 Route::get('/daily_performance', function () {
     return view('pages.daily_performance');
-});
+})->name('daily_performance');
 
 Route::get('/quality_system', function () {
     return view('pages.quality_system');

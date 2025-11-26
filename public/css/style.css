@@ -1038,6 +1038,9 @@ ul.rapi {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 15;
+    color: white !important;
+    font-family: "Saira", sans-serif;
+    line-height: 1.2;
 }
 
 .vision-text {
@@ -1076,7 +1079,7 @@ ul.rapi {
 }
 
 .quality-overlay {
-    background: linear-gradient(135deg, rgba(46, 204, 113, 0.85), rgba(52, 152, 219, 0.85));
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.85), rgba(26, 26, 46, 0.85));
     position: absolute;
     top: 0;
     left: 0;
@@ -1115,6 +1118,9 @@ ul.rapi {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 15;
+    color: white !important;
+    font-family: "Saira", sans-serif;
+    line-height: 1.2;
 }
 
 .quality-text {
@@ -1124,6 +1130,9 @@ ul.rapi {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 15;
+    text-align: center !important;
+    color: white !important;
+    font-family: inherit;
 }
 
 .quality-text-en {
